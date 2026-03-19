@@ -21,11 +21,13 @@
         align-items: center;
         text-align: center;
         overflow: hidden;
+        position: relative;
     }
 
     .container {
         color: #fff;
         animation: fadeIn 2s ease-in-out;
+        padding: 20px;
     }
 
     h1 {
@@ -35,13 +37,34 @@
         animation: glow 2s infinite alternate;
     }
 
-    p {
-        font-size: 1.5rem;
+    .arabic {
+        font-size: 2rem;
         margin-top: 15px;
+        direction: rtl;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 0 0 10px #fff;
         animation: fadeInUp 2s ease;
     }
 
-    /* Glow Animation */
+    p {
+        font-size: 1.3rem;
+        margin-top: 10px;
+        animation: fadeInUp 2s ease;
+    }
+
+    /* Bottom Name */
+    .signature {
+        position: absolute;
+        bottom: 15px;
+        right: 20px;
+        color: #fff;
+        font-size: 1rem;
+        opacity: 0.8;
+        text-shadow: 0 0 5px #000;
+    }
+
+    /* Animations */
     @keyframes glow {
         from {
             text-shadow: 0 0 10px gold, 0 0 20px orange;
@@ -51,7 +74,6 @@
         }
     }
 
-    /* Fade Animations */
     @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
@@ -95,7 +117,17 @@
 
 <div class="container">
     <h1>Eid Mubarak</h1>
+
+    <div class="arabic">
+        عيد مبارك<br>
+        تقبل الله منا ومنكم
+    </div>
+
     <p>May Allah fill your life with happiness, peace, and blessings ✨</p>
+</div>
+
+<div class="signature">
+    From Sohail Abbas
 </div>
 
 <!-- Sparkles Script -->
