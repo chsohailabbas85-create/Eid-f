@@ -21,13 +21,13 @@
         align-items: center;
         text-align: center;
         overflow: hidden;
-        position: relative;
     }
 
     .container {
         color: #fff;
         animation: fadeIn 2s ease-in-out;
         padding: 20px;
+        max-width: 90%;
     }
 
     h1 {
@@ -37,31 +37,26 @@
         animation: glow 2s infinite alternate;
     }
 
+    /* 🔥 Arabic upgraded */
     .arabic {
-        font-size: 2rem;
+        font-size: 2.2rem;
         margin-top: 15px;
         direction: rtl;
-        font-weight: bold;
-        color: #fff;
-        text-shadow: 0 0 10px #fff;
-        animation: fadeInUp 2s ease;
+        font-weight: 900;
+        line-height: 1.8;
+
+        background: linear-gradient(45deg, gold, orange, white, gold);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        animation: arabicGlow 3s infinite alternate, fadeInUp 2s ease;
     }
 
     p {
         font-size: 1.3rem;
-        margin-top: 10px;
+        margin-top: 15px;
         animation: fadeInUp 2s ease;
-    }
-
-    /* Bottom Name */
-    .signature {
-        position: absolute;
-        bottom: 15px;
-        right: 20px;
-        color: #fff;
-        font-size: 1rem;
-        opacity: 0.8;
-        text-shadow: 0 0 5px #000;
+        line-height: 1.6;
     }
 
     /* Animations */
@@ -71,6 +66,15 @@
         }
         to {
             text-shadow: 0 0 30px gold, 0 0 60px orange;
+        }
+    }
+
+    @keyframes arabicGlow {
+        0% {
+            text-shadow: 0 0 10px gold, 0 0 20px orange;
+        }
+        100% {
+            text-shadow: 0 0 25px gold, 0 0 50px orange;
         }
     }
 
@@ -119,16 +123,17 @@
     <h1>Eid Mubarak</h1>
 
     <div class="arabic">
-        عيد مبارك<br>
-        تقبل الله منا ومنكم
+        عيد مبارك 🌙✨<br>
+        أعاده الله عليكم بالخير واليمن والبركات<br>
+        تقبل الله منا ومنكم صالح الأعمال
     </div>
 
-    <p>May Allah fill your life with happiness, peace, and blessings ✨</p>
+    <p>
+        May Allah fill your life with happiness, peace, and blessings ✨<br><br>
+        Regards,<br>
+        Sohail Abbas
+    </p>
 </div>
-
-<p style="position:absolute; bottom:60px; right:20px; font-size:1rem; color:#fff; opacity:0.85;">
-    From Sohail Abbas
-</p>
 
 <!-- Sparkles Script -->
 <script>
