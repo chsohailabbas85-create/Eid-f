@@ -37,7 +37,6 @@
         animation: glow 2s infinite alternate;
     }
 
-    /* 🔥 Arabic upgraded */
     .arabic {
         font-size: 2.2rem;
         margin-top: 15px;
@@ -57,6 +56,47 @@
         margin-top: 15px;
         animation: fadeInUp 2s ease;
         line-height: 1.6;
+    }
+
+    /* 🌙 Eid Button */
+    .eid-btn {
+        display: inline-block;
+        margin-top: 40px;
+        padding: 15px 40px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 50px;
+
+        background: linear-gradient(45deg, gold, orange, #ffcc00);
+        box-shadow: 0 0 15px gold, 0 0 30px orange;
+
+        transition: 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Shine effect */
+    .eid-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+        background: rgba(255,255,255,0.4);
+        transform: skewX(-25deg);
+    }
+
+    .eid-btn:hover::before {
+        left: 130%;
+        transition: 0.7s;
+    }
+
+    .eid-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px gold, 0 0 50px orange;
     }
 
     /* Animations */
@@ -133,6 +173,12 @@
         Regards,<br>
         Sohail Abbas
     </p>
+
+    <!-- 🌙 Button -->
+    <a href="https://digibouquet.vercel.app/bouquet/9447abac-d675-41c7-830b-2e5f016f7bbb" 
+       class="eid-btn" target="_blank">
+       🌙 Continue to Wish ✨
+    </a>
 </div>
 
 <!-- Sparkles Script -->
